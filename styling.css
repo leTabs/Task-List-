@@ -1,0 +1,84 @@
+:root{
+    --bColor: rgb(23, 23, 108);
+    counter-reset: spans;
+}
+*{
+    font-family: sans-serif;
+    background-color: var(--bColor);
+}
+main{
+    width: 40rem;
+    border: solid white 1px;
+    margin: 2rem auto;
+    padding: 3.5rem;
+    background-color:rgb(13, 13, 57) ;
+    box-shadow: 3px 3px 120px 3px rgb(8, 4, 43);
+}
+h1{
+    font-size: 5rem;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    
+}
+h1, .submit, .toDoInput{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(13, 13, 57);
+}
+.submit{
+    width: 4rem;
+    height: 4rem;
+    margin: 2.5rem auto 1rem auto;
+    font-size: 2.5rem;
+    border: transparent;
+    color: cyan;
+    border-radius: 50%;
+    transition: 500ms;
+    background-color: rgb(13, 13, 57);
+}
+.submit:hover{
+    transform: rotate(90deg);
+    font-size: 3rem;
+    border: solid white 1px;
+    background-color:rgb(0, 4, 45);
+    cursor: cell;
+}
+.toDoInput{
+    height: 3rem;
+    width: 98.7%;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    border: transparent;
+    border-bottom: solid white 1px;
+    color: white;
+    outline: none;
+    transition: 400ms;
+    text-shadow: 3px 3px 10px 3px black;
+    background: transparent;
+}
+.toDoInput:hover{
+    transform: scale(115%);
+    font-size: 2.5rem ;
+}
+p{
+    font-size: 2.5rem;
+    counter-increment: spans;
+    background-color:rgb(0, 4, 45) ;
+    transition: 300ms;
+}
+p:hover{
+    color: rgb(20, 76, 76);
+    cursor: pointer;
+}
+p::before{
+    content: counter(spans);
+}
+.things{
+    border:solid white 0.1rem;
+    margin: 3rem;
+    color: cyan;
+    background-color:rgb(0, 4, 45);
+    padding:1.5rem;
+    box-shadow: 3px 3px 14px 3px black;
+}
